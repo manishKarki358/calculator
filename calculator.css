@@ -1,0 +1,97 @@
+*,::after,::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+.calculator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(134, 158, 179);
+    height: fit-content;
+    width: fit-content;
+    height: 400px;
+    width: 370px;
+    border-radius: 10px;
+    box-shadow: 4px 5px 15px green;
+
+
+}
+.display{
+    text-align: right;
+    height: 85px;
+    width: 360px;
+    background-color: rgb(2, 2, 15);
+    opacity: 0.8;
+    border-radius: 5px;
+    border: 2px solid red;
+    padding: 15px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: yellow;
+}
+.display .previous{
+    font-size: 19px;
+    letter-spacing: 2px;
+}
+.display .current{
+    letter-spacing: 3px;
+    font-size: 23px;
+}
+
+.btns{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding:10px;
+}
+.btns button{
+    margin: 10px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: rgb(68, 59, 59);
+    color: rgb(255, 255, 255);
+    box-shadow: 2px 3px 10px rgb(209, 209, 189);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+.btns button.clear{
+background-color: red;
+}
+.btns button.delete{
+    background-color: rgb(220, 40, 40);
+    
+    }
+.btns button:hover{
+    background-color: rgb(202, 201, 201);
+    color: black;  
+}
+.btns button.equal{
+    grid-column: span 2;
+    color: rgb(251, 252, 253);
+    background: linear-gradient(to right,rgb(7, 226, 7),green,rgb(3, 241, 3));
+
+}
+.btns button.equal:hover{
+    background: rgb(17, 2, 2);
+    color: rgb(254, 254, 255);
+
+}
